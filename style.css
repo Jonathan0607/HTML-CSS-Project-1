@@ -74,7 +74,7 @@ body {
   right: 0;
   width: 100%;
   height: 100%;
-  animation: moveRight 5s ease 1s forwards;
+  animation: moveRight 4s ease 1s forwards;
   z-index: 100;
 }
 
@@ -85,7 +85,7 @@ body {
   right: 0;
   width: 100%;
   height: 100%;
-  animation: moveRight 5s ease 1.5s forwards;
+  animation: moveRight 4s ease 1.3s forwards;
   z-index: 100;
 }
 
@@ -96,7 +96,7 @@ body {
   right: 0;
   width: 100%;
   height: 100%;
-  animation: moveRight 5s ease 2s forwards;
+  animation: moveRight 4s ease 2s forwards;
   z-index: 100;
 }
 
@@ -131,7 +131,7 @@ body {
   opacity: 0;
   width:0;
   height:0;
-  animation: appearButtons 4s ease 2.5s forwards;
+  animation: appearButtons 3s ease 2.2s forwards;
   display: flex;
   justify-content: space-between;
   background: transparent;
@@ -140,7 +140,7 @@ body {
 
 .button-box a {
   color: transparent;
-  animation: appear 2s ease 5.5s forwards;
+  animation: appear 2s ease 3.5s forwards;
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -167,7 +167,7 @@ body {
 .button-box a:nth-child(2) {
   background: transparent;
   color: transparent;
-  animation: appear 2s ease 5.5s reverse forwards;
+  animation: appear 2s ease 3.5s reverse forwards;
 }
 
 .button-box a:nth-child(2):hover {
