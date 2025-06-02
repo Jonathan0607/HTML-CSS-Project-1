@@ -306,6 +306,8 @@ body {
   height: 400px;
   object-fit: cover;
   object-position: 100% 0;
+  opacity: 0;
+  animation: appearImage 3s ease 2.5s forwards;
 }
 
 .image-container{
