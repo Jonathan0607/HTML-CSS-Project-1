@@ -278,6 +278,12 @@ body {
   }
 }
 
+@keyframes appearImage {
+  100%{
+    opacity: 1;
+  }
+}
+
 @keyframes appear{
   0%{
     color: #00abf0;
@@ -293,4 +299,18 @@ body {
     margin-left:35px;
     opacity: 1;
   }
+}
+
+.the-picture{
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  object-position: 100% 0;
+}
+
+.image-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
