@@ -260,13 +260,14 @@ body {
 .the-picture{
   border: 0px solid #00abf0;
   border-radius: 50%;
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   object-fit: cover;
   object-position: 100% 0;
   opacity: 0;
-  margin-left: 200px;
   animation: appearImage 3s ease 2.5s forwards;
+  position: relative;
+  z-index: 1;
 }
 
 .image-container{
@@ -275,7 +276,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
+
+.image-container::before {
+  content: '';
+  position: absolute;
+  background: transparent;
+  border: 6px #ededed dashed;
+  border-radius: 50%;
+  right : 50px;
+  width: 600px;;
+  height: 600px;
+  align-self: center;
+  z-index: -1;
+  opacity: 1;
+  position: absolute;
+  opacity: 0;
+  animation: appearImage 3s ease 4.5s forwards;
+}
+
+
 
 @keyframes moveRight{
   100%{
@@ -327,3 +348,4 @@ body {
     opacity: 1;
   }
 }
+
