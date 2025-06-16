@@ -131,16 +131,14 @@ body {
   opacity: 0;
   width:0;
   height:0;
-  animation: appearButtons 3s ease 2.2s forwards;
   display: flex;
   justify-content: space-between;
   background: transparent;
+  animation: appearButtons 3s ease 2.2s forwards;
 
 }
 
 .button-box a {
-  color: transparent;
-  animation: appear 2s ease 3.5s forwards;
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -156,22 +154,26 @@ body {
   letter-spacing: 1px;
   overflow: hidden;
   transition: 0.5s;
-
+  z-index: 1;
+  color: #081b29;
+  opacity: 0;
+  animation: fadeIn 2s ease 3.5s forwards;
 }
 
 .button-box a:hover {
-  background: transparent;
+  background: #081b29;
   color: #00abf0;
 }
 
 .button-box a:nth-child(2) {
   background: transparent;
-  color: transparent;
-  animation: appear 2s ease 3.5s reverse forwards;
+  color: #00abf0;
+  opacity: 0;
+  animation: fadeIn 2s ease 3.5s forwards;
 }
 
 .button-box a:nth-child(2):hover {
-  background: transparent;
+  background: #00abf0;
   color: #081b29;
 }
 
@@ -180,24 +182,23 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 0;
+  width: 100%;
   height: 100%;
-  background: #081b29;
-  z-index: -1;
+  background: #00abf0;
+  z-index: -10;
   transition: 0.5s;
 }
-
 .button-box a:hover::before {
-  width: 100%;
-}
-
-.button-box a:nth-child(2)::before {
-  background: #00abf0;
   width: 0%;
 }
 
-.button-box a:nth-child(2):hover::before {
+.button-box a:nth-child(2)::before {
+  background: #081b29;
   width: 100%;
+}
+
+.button-box a:nth-child(2):hover::before {
+  width: 0%;
 }
 
 .hom-sci {
@@ -268,6 +269,7 @@ body {
   animation: appearImage 3s ease 2.5s forwards;
   position: relative;
   z-index: 1;
+  margin-right: 300px;
 }
 
 .image-container{
@@ -277,23 +279,6 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-}
-
-.image-container::before {
-  content: '';
-  position: absolute;
-  background: transparent;
-  border: 6px #ededed dashed;
-  border-radius: 50%;
-  right : 50px;
-  width: 600px;;
-  height: 600px;
-  align-self: center;
-  z-index: -1;
-  opacity: 1;
-  position: absolute;
-  opacity: 0;
-  animation: appearImage 3s ease 4.5s forwards;
 }
 
 
@@ -328,16 +313,15 @@ body {
   100%{
     opacity: 1;
     margin: 0;
-    margin-left: 300px;
+    margin-left: 150px;
   }
 }
 
-@keyframes appear{
-  0%{
-    color: #00abf0;
-
+@keyframes appear {
+  0% {
+    color: transparent;
   }
-  100%{
+  100% {
     color: #081b29;
   }
 }
@@ -345,6 +329,15 @@ body {
 @keyframes spawn{
   100%{
     margin-left:35px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
